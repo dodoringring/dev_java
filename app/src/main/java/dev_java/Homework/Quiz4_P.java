@@ -22,10 +22,24 @@ public class Quiz4_P {
     Scanner scanner = new Scanner(System.in);
 
     int x = random.nextInt(10);// 0부터 10까지 범위이다 라는 의미
+    System.out.println("채번한 숫자는====>" + x);
     int y = -1;
     while (true) {
-      int y = scanner.nextInt(10);
-
+      System.out.println("0부터 9까지 숫자를 하나 입력하세요.");
+      y = scanner.nextInt();
+      System.out.println("사용자가 선택한 값 :" + y);
+      if (x == y) {// 맞다
+        System.out.println("축하합니다.");
+        scanner.close();// 스캐너 쓰고 해킹 안당하기 위해 닫는다.
+        break;
+      } else if (x > y) {
+        System.out.println("올리세요.");
+      } else if (x < y) {
+        System.out.println("내리세요.");
+      } else if (y == 10) {
+        scanner.close();
+        System.exit(0);
+      }
     }
   }
 }
