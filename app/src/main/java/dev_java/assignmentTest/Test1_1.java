@@ -23,5 +23,23 @@ public class Test1_1 {
   public static void main(String[] args) {
     Test1_1 t = new Test1_1();
     t.count();
+
+    String s1=new String("안녕");
+    String s2=new String("안녕");
+    String s3 ="안녕";
+    String s4 = "안녕";
+    if(s1==s2){
+      System.out.println("주소번지가 같니?");
+    }
+    if(s1.equals(s2)){
+      System.out.println("주소번지가 같니?");
+    }
+    if(s3==s4){
+      System.out.println("주소번지가 같니?");
+    }
+    if(s3.equals(s4)){
+      System.out.println("주소번지가 같니?");
+    }
+
   }
 }

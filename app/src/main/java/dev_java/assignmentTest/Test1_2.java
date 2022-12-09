@@ -2,7 +2,7 @@ package dev_java.assignmentTest;
 
 public class Test1_2 {
   int i=1;
-  public void Bbb(){
+  public void Aaa(){
   while(i<=20){
     if(i%5==0){
       System.out.println(i + ": 5의 배수입니다.");
