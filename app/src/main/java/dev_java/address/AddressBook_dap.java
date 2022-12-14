@@ -172,7 +172,7 @@ public class AddressBook_dap implements ActionListener {
       // while(dtm_addr.getRowCount()>0){
       //   dtm_addr.removeRow(0);
       // }//없으면 밑에 추가가 된다.
-      for(int i=0;i<members.length;i++){
+      for(int i=0;i<members.length;i++){ 
         Vector<String> oneRow= new Vector<>();//<>제네릭
         oneRow.add(members[i][0]);
         oneRow.add(members[i][1]);
