@@ -14,8 +14,7 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import java.awt.event.*;
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+
 
 public class GradeView extends JFrame implements ActionListener {
    // 선언부
