@@ -1,4 +1,4 @@
-package dev_java.Homework;
+package dev_java.Homework.quiz1214;
 
 /* 문제 4 
 

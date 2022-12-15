@@ -1,4 +1,4 @@
-package dev_java.Homework;
+package dev_java.Homework.quiz1214;
 /*문제 3
 
 1부터 100까지 세면서 5의 배수이면 fizz를 출력하고
