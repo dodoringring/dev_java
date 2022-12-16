@@ -7,15 +7,66 @@ package dev_java.Homework.quiz1215;
 음수합 : -24
 양수합 : 17
 
+변수 몇개? 2개 mhap, phap
+전변은 무엇? 배열 nansus[]
+합계 - total
+난수 채번 제대로 됐는지 체크하기
+
+
  */
 
 public class Practice2 {
-  
-  public static void main(String[] args) {
-    int user[]=new int[10];
+  int nansus[]=new int[10];
+  int mhap=0;
+  int phap=0;
+  int user[]=new int[10];
+
+  void setArray(){
     for(int i=0;i<user.length;i++){
     user[i]=(int)(Math.random()*21)%21-10;
     }//reandom은 0.0~1.0미만
-    System.out.println(user[]);
+
+  }
+
+  void setArryInt(int size){
+    for(int i=0;i<size;i++){
+      user[i]=(int)(Math.random()*21)%21-10;
+      }
+
+  }
+
+  void total1(){
+    System.out.println("난수들의 합 : ");
+    for(int i=0;i<user.length;i++){
+      mhap=mhap+user[i];
+      }
+      System.out.println(mhap);
+  }
+
+  void total(int user[]){
+    for(int i=0;i<user.length;i++){
+      if(user[i]<0){
+        mhap=mhap+user[i];
+      }else if(user[i]>0){
+        phap=phap+user[i];
+      }
+    }//for끝
+    System.out.println("\n");
+    System.out.println("음수합"+mhap);
+    System.out.println("양수합"+phap);
+  }
+
+  void nansuPrint(){
+    for(int i=0; i<user.length;i++){
+    System.out.print(user[i]+" ");
+    }
+
+  }
+
+  public static void main(String[] args) {
+     Practice2 p2=new  Practice2();
+     p2.setArray();
+     p2.nansuPrint();
+     p2.total(p2.user);
   }
 }

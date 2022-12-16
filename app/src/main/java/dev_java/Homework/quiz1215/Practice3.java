@@ -13,9 +13,53 @@ package dev_java.Homework.quiz1215;
        2
        0 4 5 6 6 7 8 8 9 9
 숫자 : 0 1 2 3 4 5 6 7 8 9
-갯수 : 10 9 18 11 7 9 15 14 7 5 (
+갯수 : 10 9 18 11 7 9 15 14 7 5 
+100개를 일차배열로 초기화하기
+카운트는 전역으로
+100개는 지변으로
  */
 
 public class Practice3 {
+  int counts[]=new int[10];
+
+  int[] intArray(int datas[], int size){
+    int i=0;
+    for(;i<datas.length;i++){
+      datas[i]=(int)(Math.random()*10);
+    }
+    dataPrint(datas);
+    return datas;
+  }
+  void dataPrint(int[] datas){
+    for(int i=0; i<datas.length;i++){
+      System.out.print(datas[i]);
+      if(i%10==9){
+        System.out.println("\n");
+        }//end of if
+      }//end of for
+    }
+  void bindo(int[] datas){
+    
+    
+    for(int i=0;i<datas.length;i++){
+      for(int j=0;j<10;j++){
+        if(j==datas[i]){
+          counts[j]=counts[j]+1;
+        }
+      }//end of inner for
+    }//end of outter for
+
+    for(int i=0;i<10;i++){
+      System.out.println(counts[i]);
+    }
+  }
   
+  public static void main(String[] args) {
+    int datas[]=new int[100];
+    Practice3 p3=new Practice3();
+    p3.intArray(datas, 100);
+    p3.dataPrint(datas);
+    p3.bindo(datas);
+    
+  }
 }

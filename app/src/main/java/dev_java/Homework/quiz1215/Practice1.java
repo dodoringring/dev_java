@@ -70,6 +70,7 @@ public class Practice1 {
 
     int hap=p.hap(p.MethodB());//////질문하기!!hap의 파라미터 자리에 arr라는 메소드비의 배열을 넣고싶다.
     //합을 호출했는데 어째서 메소드비도 호출이 된건지 궁금
+    //hap안에 파라미터값으로 메소드 비를 넣어서 호출은 한것이다.
     System.out.println("총점은"+hap);
     p.avg(hap);
   }
