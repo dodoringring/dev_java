@@ -4,10 +4,10 @@ import lombok.Builder;
 import lombok.Data;
 
 @Data
-// @Builder
+@Builder
 public class DeptVO {
   int deptno;
-  int dname;
+  String dname;
   String loc;
 
   
