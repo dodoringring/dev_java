@@ -148,7 +148,7 @@ public class CalculatorApp extends JFrame implements ActionListener{
       
     }
     if(obj==jbtn_two){
-      v.add(2));
+      v.add(2);
     }
     if(obj==jbtn_equal){
     

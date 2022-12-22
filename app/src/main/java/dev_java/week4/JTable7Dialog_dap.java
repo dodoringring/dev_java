@@ -29,7 +29,7 @@ public class JTable7Dialog_dap extends JDialog implements ActionListener {
 	JButton jbtn_save = new JButton("저장");
 	JButton jbtn_close = new JButton("닫기");
 	//왜 null을 주는지 설명할 수 있다
-	String[] oneRow = null;
+	DeptVO pdVO = null;
 	// 생성자
 	public JTable7Dialog_dap() {
 	}
@@ -88,15 +88,15 @@ public class JTable7Dialog_dap extends JDialog implements ActionListener {
 	//아래 메소드는 DeptTable7에서 호출됨
 	//actionPerformed에서 이벤트(입력,수정,상세보기)가 발생되면 호출됨
 	//메소드의 파라미터 자리는 Call by Value에 의해서 결정됨
-	public void set(String title, boolean isView, String[] oneRow){//입력 버튼을 엄마창 누르면 여기로 온다.
+	public void set(String title, boolean isView, DeptVO pdVO){//입력 버튼을 엄마창 누르면 여기로 온다.
 		this.setTitle(title);
 		this.setVisible(isView);
-		this.oneRow = oneRow;
-		setValue(oneRow);//null
+		this.pdVO = pdVO;
+		setValue(pdVO);//null
 	}
-	public void setValue(String[] oneRow){//이런 공통코드를 나는 작성할 수 있다.
+	public void setValue(DeptVO pdVO){//이런 공통코드를 나는 작성할 수 있다.
 		//입력을 위한 윈도우 설정 - 모든 값을 빈문자열로 셋팅함
-		if(oneRow == null){
+		if(pdVO == null){
 			setDeptno("");
 			setDname("");
 			setLoc("");
@@ -104,9 +104,9 @@ public class JTable7Dialog_dap extends JDialog implements ActionListener {
 		//상세조회, 수정시는 배열로 받은 값으로 셋팅함
 		//부모창에서 set메소드 호출시 파라미터로 넘겨준 값으로 초기화할것.
 		else{
-			setDeptno(oneRow[0]);
-			setDname(oneRow[1]);
-			setLoc(oneRow[2]);
+			setDeptno(String.valueOf(pdVO.getDeptno()));
+			setDname(pdVO.getDname());
+			setLoc(pdVO.getLoc());
 		}
 	}//end of setValue
 
@@ -120,13 +120,14 @@ public class JTable7Dialog_dap extends JDialog implements ActionListener {
 		Object obj = e.getSource();
 		if(obj == jbtn_save){
 			//oneRow가 존재하면 수정모드, 그렇지 않으면 입력모드로 함
-			if(oneRow !=null){
+			if(pdVO !=null){
 
 			}else{
-				String[] oneRow = { getDeptno(), getDname(), getLoc()};
+				String [] onRow = { getDeptno(), getDname(), getLoc()};
+				DeptVO insVO=DeptVO.builer().deptno(Integer.parseInt(getDeptno()));
 				System.out.println(oneRow[0]+", "+oneRow[1]+", "+oneRow[2]);
 				System.out.println("before : "+DeptTable7.vdata.size());
-				DeptTable7.vdata.add(oneRow);
+				DeptTable7.vdata.add(pdVO);
 				System.out.println("after : "+DeptTable7.vdata.size());
 				deptTable7.refreshData();
 				this.dispose();

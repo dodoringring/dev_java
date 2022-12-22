@@ -24,16 +24,21 @@ class Exam2{
     
   }
 
-  // public void methodA(){
-  //   //while문 사용시 무한루프 방지 코드를 작성 할 것
-  //   //while문 안에 증감연산자 있는지 파악할것.
-  //   System.out.println("methodA호출성공");
-  //   while(0<2){
-  //     if(2==2)break;
-  //   }
-  // }
+  public void methodA(){
+    //while문 사용시 무한루프 방지 코드를 작성 할 것
+    //while문 안에 증감연산자 있는지 파악할것.
+    System.out.println("methodA호출성공");
+    Scanner s =new Scanner(System.in);
+    int choice =s.nextInt(); 
+    if(choice>2||choice<0){
+      System.out.println("1혹은 2 중에서 입력하세요");
+      return;
+    }
 
-}
+    }
+  }
+
+
 
 public class Test2_2 {
 public static void main(String[] args) {

@@ -41,7 +41,7 @@ public class DeptTable7_dap extends JFrame implements ActionListener {
 	JButton jbtn_upd = new JButton("수정");
 	JButton jbtn_del = new JButton("삭제");
 	JButton jbtn_det = new JButton("상세보기");
-	static Vector<String[]> vdata = new Vector<>();//vdata.size() = 0;
+	static Vector<DeptVO> vdata = new Vector<>();//vdata.size() = 0;
 
 	// 생성자
 	public DeptTable7_dap() {
@@ -95,8 +95,12 @@ public class DeptTable7_dap extends JFrame implements ActionListener {
 		System.out.println("DeptTable7_dap : "+vdata.size());///////////////////////////////0질문하기!!
 		//벡터의 크기만큼 반복하면서 dtm_dept 데이터셋에 String[]추가함
 		for(int i=0;i<vdata.size();i++){
-			String[] oneRow = vdata.get(i);
-			dtm_dept.addRow(oneRow);
+			DeptVO oneRow = vdata.get(i);
+			Vector<Object> vone=new Vector<>();
+			vone.add(oneRow.getDeptno());
+			vone.add(oneRow.getDname());
+			vone.add(oneRow.getLoc());
+			dtm_dept.addRow(vone);
 		}
 	}
 
@@ -118,7 +122,7 @@ public class DeptTable7_dap extends JFrame implements ActionListener {
 			int index = jtb_dept.getSelectedRow();
 			//데이셋객체로 벡터를 사용중이니 벡터에서 꺼낸 값을 String[]초기화
 			//테이블의 양식 폼인 JTable 이벤트로 얻어옴
-			String[] oneRow = vdata.get(index);
+			DeptVO pdVO = vdata.get(index);
 			jtd7.set("수정",true,oneRow);
 			
 		}
