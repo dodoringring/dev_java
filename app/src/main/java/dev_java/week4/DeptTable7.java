@@ -102,7 +102,7 @@ public class DeptTable7 extends JFrame implements ActionListener {
       Vector<Object> vone = new Vector<>();
       vone.add(oneRow.getDeptno());
       vone.add(oneRow.getDname());
-      vone.add(oneRow.getloc());
+      vone.add(oneRow.getLoc());
       dtm_dept.addRow(vone);
     }
   }
@@ -142,6 +142,16 @@ public class DeptTable7 extends JFrame implements ActionListener {
 
       DeptVO pdVO = vdata.get(index);
       jtd7.set("상세보기", true, pdVO, false);
+    }
+    //너 삭제할거야?
+    else if(obj==jbtn_del){
+      int index = jtb_dept.getSelectedRow();
+      if(index == 1){
+      JOptionPane.showMessageDialog(this, "삭제할것 선택해줘.");
+      return;
+      }
+      vdata.remove(index);
+      refreshData();
     }
 
   }
