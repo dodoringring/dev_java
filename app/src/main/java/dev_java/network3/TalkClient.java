@@ -1,9 +1,8 @@
 package dev_java.network3;
-​
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;​
+import javax.swing.JPanel;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
