@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class DBConnectionMgr {
-  public static final String _DRIVER = "oracle.jdbc.driver.OracleDriver";
+  public static final String _DRIVER = "oracle.jdbc.driver.OracleDriver";//오라클 안에 데이터가 들어있다...
 
   public static final String _URL = "jdbc:oracle:thin:@127.0.0.1:1521:orcl11";
   public static String _USER = "scott";
@@ -124,8 +124,10 @@ public class DBConnectionMgr {
 }
 /*
  * JDBC API를 이용하여 DB연동하기
- * 1. 각 제조사가 제공하는 드라이버 클래스를 로딩한다.
+ * 1. 각 제조사가 제공하는 드라이버 클래스를 로딩한다.(obdbc6.jar)
+ * Class.forName(드라이버 클래스 적음-풀네임)
  * 2. 물리적으로 떨어져있는 오라클 서버와 연결 통로를 확보해준다.
+ * Connection은 인터페이스이다.-오른쪽에 구현체 클래스가 와야한다.
  * 3. DML문을 자바에서 오라클 서버로 전달 해 줄 인터페이스를 생성한다.(Statement:정적 쿼리문, PreparedStatement:동적 쿼리문 지원)
  * 4. SELECT의 경우 오라클 서버에서 제공하는 커서를 지원하는 ResultSet인터페이스를 활용하여
  * 테이블에 제공되는 커서를 조작하여 해당 로우에 데이터가 존재하면 Cursor...open....fetch과정을 통해서
