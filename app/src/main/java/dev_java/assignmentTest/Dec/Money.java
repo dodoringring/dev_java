@@ -1,4 +1,4 @@
-package dev_java.assignmentTest;
+package dev_java.assignmentTest.Dec;
 
 public class Money {
 

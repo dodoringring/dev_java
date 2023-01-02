@@ -1,4 +1,4 @@
-package dev_java.assignmentTest;
+package dev_java.assignmentTest.Dec;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

@@ -1,4 +1,4 @@
-package dev_java.assignmentTest;
+package dev_java.assignmentTest.Dec;
 //자바 같은이름 메소드 중복선언
 //메소드 오버로딩-이것과 관계 생성자 컨셉
 //메소드 오버라이딩-문제와 상관없다

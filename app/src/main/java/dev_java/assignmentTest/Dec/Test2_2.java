@@ -1,4 +1,4 @@
-package dev_java.assignmentTest;
+package dev_java.assignmentTest.Dec;
 //while문에 브레이크가 없다
 
 import java.util.Scanner;
