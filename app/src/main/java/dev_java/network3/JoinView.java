@@ -107,16 +107,13 @@ public class JoinView extends JDialog implements ActionListener {
       jdl_join.setLocationRelativeTo(null);// 창 가운데서 띄우기
       jdl_join.setVisible(true);
    }
-​
    // 단위테스트욤
    public static void main(String[] args) {
       JoinView join = new JoinView();
       join.initDisplay();
    }
-​
    @Override
    public void actionPerformed(ActionEvent e) {
       // TODO Auto-generated method stub
-​
    }
 }

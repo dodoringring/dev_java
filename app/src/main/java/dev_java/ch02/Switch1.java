@@ -9,7 +9,7 @@ public class Switch1 {
       System.out.println("소보로 빵입니다.");
       break;
       }
-      case "도우넛"{
+      case "도우넛" :{
         int protocol = 200;
         System.out.println("%s빵입니다.%d %n",bread,protocol);
         break;

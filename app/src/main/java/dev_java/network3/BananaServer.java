@@ -26,7 +26,7 @@ public class BananaServer extends JFrame{
   //   this.setTitle(title);
   //   this.setSize(400,300);
   //   this.setVisible(true);
-  }
+//  }
   //this는 클래스 쪼개기 즉 화면과 로직의 분리 또는 하나의 클래스를 여러개의 클래스로 나누어 처리할때만 필요하다.
   public static void main(String[] args) {
     // new BananaServer();

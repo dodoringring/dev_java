@@ -15,7 +15,7 @@ import java.util.Vector;
 public class CalculatorApp extends JFrame implements ActionListener{
   //선언부
   Vector <String> v=new Vector();
-  v.parseInt
+
   JTextField jtf_display=new JTextField(10);//북쪽에붙이기
   JPanel jp_center =new JPanel();
   JButton jbtn_clear = new JButton("C");//clear
